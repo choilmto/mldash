@@ -11,6 +11,7 @@ Instead of asking "how long will training the model take", [alternative measurem
 - time per output token
 - latency
 - throughput
+
 These measurements are useful, which is why [benchmarking libraries](https://github.com/openai/tiktoken) exist. However, they don't indicate how an engineer might choose a more powerful machine to perform training. For that, classic system administrator tools are useful, but dashboards are far more user-friendly. After setting up Grafana, or some other dashboard, the ml engineer has access to visualisations of how the computers running their training are performing.
 
 ## Grafana prioritizes the cloud
@@ -41,6 +42,7 @@ with a bit of configuration. For EC2, Grafana provides the following metrics:
 - EC2 status check failed attached ebs
 - EC2 status check failed instance
 - EC2 status check failed system
+
 With additional configuration, Grafana can take those metrics and turn them into dashboards. In the EC2 dashboard, panels display how instances are performing based on a specific metric.
 
 ## Finding the bottleneck
@@ -52,6 +54,7 @@ Some obvious cues when troubleshooting a machine's performance, are immediately 
 Some common scenarios arise when analysing system performance:
 - one or more bottlenecks, as in system performance will not improve unless those bottlenecks are relieved
 - no bottlenecks, but there are multiple factors that will improve performance, each factor having its own price tag
+
 Even after determining which factor(s) cause a machine to be slow, the next obvious question is "how much to improve the system". Perhaps the dashboard might be able to answer that question, but an engineer still might want to verify their hypothesis.
 
 ## Fast and cheap experiments
@@ -60,6 +63,7 @@ In our example, the engineer wants to ensure that cpu usage is below a certain t
 - will increasing the number of cores on the machine reduce cpu usage
 - is 4 cores too enough
 - is 8 cores too much
+
 To analyse the outcome, Grafana has a 'Rightsizing' section to compare performance, ranking the machines by metric for the user.
 
 ![rightsize](rightsize.png)
