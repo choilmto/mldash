@@ -1,18 +1,6 @@
 # Brief study of cost and performance of EC2 instances using turn-key solutions in Grafana and AWS
 
-There are many things to consider in [MLOps and the ML lifecycle](https://aws.amazon.com/what-is/mlops/). Looking at using EC2 instances for training models in the AWS ecosystem, two obvious concerns arise around cost and performance. EC2 instances can get expensive, so the inclination is to choose an instance that is less powerful; however, the trade-off is speed. Since speed is important for software companies, the answer is a compromise, in this example, to find a cheap enough instance that will train the model fast enough.
-
-## How to think about speed
-
-Ideally, companies would have complete information to make their decisions. For example, a company could anticipate the cost to train a specific model using a specific number of tokens. Furthermore, they could anticipate the time it takes to complete training on the model. Such information isn't typically available, leaving engineers with much guesswork.
-
-Instead of asking "how long will training the model take", [alternative measurements](https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices) might be:
-- time to first token
-- time per output token
-- latency
-- throughput
-
-These measurements are useful, which is why [benchmarking libraries](https://github.com/openai/tiktoken) exist. However, they don't indicate how an engineer might choose a more powerful machine to perform training. For that, classic system administrator tools are useful, but dashboards are far more user-friendly. After setting up Grafana, or some other dashboard, the ml engineer has access to visualisations of how the computers running their training are performing.
+There are many things to consider in [MLOps and the ML lifecycle](https://aws.amazon.com/what-is/mlops/). Looking at using EC2 instances for training models in the AWS ecosystem, two obvious concerns arise around cost and performance. EC2 instances can get expensive, so the inclination is to choose an instance that is less powerful; however, the trade-off is speed. Since speed is important for software companies, the answer is a compromise, in this example, to find a cheap enough instance that will train the model fast enough. Dashboards help all sorts of users to visualize machine performance, with Grafana being a popular choice.
 
 ## Grafana prioritizes the cloud
 
