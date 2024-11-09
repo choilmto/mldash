@@ -48,11 +48,11 @@ Even after determining which factor(s) cause a machine to be slow, the next obvi
 ## Fast and cheap experiments
 
 In our example, the engineer wants to ensure that cpu usage is below a certain threshold. Next, the engineer might provision a t4g.large (2 cores), a t4g.xlarge (4 cores), and a t4g.2xlarge (8 cores), running their training on each of those machines. This experiment can validate:
-- will increasing the number of cores on the machine reduce cpu usage
 - is 4 cores too enough
 - is 8 cores too much
+- other considerations
 
-To analyse the outcome, Grafana has a 'Rightsizing' section to compare performance, ranking the machines by metric for the user.
+Realistically, machines are using many more cores for training. AWS even offers machines with 448 cores. The point of this example is to illustrate the types of questions that should be asked when rightsizing a machine. Grafana has a 'Rightsizing' section for AWS to compare performance, ranking the machines by metric for the user.
 
 ![rightsize](rightsize.png)
 
