@@ -48,7 +48,7 @@ Even after determining which factor(s) cause a machine to be slow, the next obvi
 ## Fast and cheap experiments
 
 In our example, the engineer wants to ensure that cpu usage is below a certain threshold. Next, the engineer might provision a t4g.large (2 cores), a t4g.xlarge (4 cores), and a t4g.2xlarge (8 cores), running their training on each of those machines. This experiment can validate:
-- is 4 cores too enough
+- is 4 cores enough
 - is 8 cores too much
 - other considerations
 
