@@ -52,7 +52,7 @@ In our example, the engineer wants to ensure that cpu usage is below a certain t
 - is 8 cores too much
 - other considerations
 
-Realistically, machines are using many more cores for training. AWS even offers machines with 448 cores. The point of this example is to illustrate the types of questions that could be asked when rightsizing a machine. Grafana has a 'Rightsizing' section for AWS to compare performance, ranking the machines by metric for the user.
+Realistically, machines are using many more cores for training. AWS even offers machines with 448 vcpus. The point of this example is to illustrate the types of questions that could be asked when rightsizing a machine. Grafana has a 'Rightsizing' section for AWS to compare performance, ranking the machines by metric for the user.
 
 ![rightsize](rightsize.png)
 
